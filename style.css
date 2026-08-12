@@ -1,0 +1,843 @@
+/* ==========================================================================
+   Docinho da Tia Lúcia — Folha de estilos
+   Paleta: rosa-doce, creme-baunilha, marrom-brigadeiro, caramelo, pistache
+   Assinatura visual: borda "de forminha de docinho" (scalloped), como as
+   forminhas de papel onde os doces são colocados.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Paleta */
+  --rosa-doce: #f0a3b4;
+  --rosa-doce-escuro: #d97e93;
+  --creme-baunilha: #fff6ec;
+  --creme-cartao: #fdece0;
+  --marrom-brigadeiro: #4a2e23;
+  --marrom-suave: #7a5a4a;
+  --caramelo: #d99a4e;
+  --caramelo-escuro: #b87a35;
+  --pistache: #a8c69f;
+
+  /* Tipografia */
+  --fonte-titulo: 'Caveat', cursive;
+  --fonte-corpo: 'Quicksand', sans-serif;
+
+  /* Layout */
+  --largura-max: 1120px;
+  --raio: 18px;
+  --sombra: 0 10px 25px -12px rgba(74, 46, 35, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-corpo);
+  background-color: var(--creme-baunilha);
+  color: var(--marrom-brigadeiro);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Foco visível para acessibilidade via teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--caramelo-escuro);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   Cabeçalho
+   ========================================================================== */
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--creme-baunilha);
+  border-bottom: 2px dashed var(--rosa-doce);
+}
+
+.cabecalho .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  gap: 16px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ESPAÇO RESERVADO PARA A LOGO (feita no Canva).
+   Substitua o conteúdo do <div class="logo-placeholder"> por:
+   <img src="imagens/logo.png" alt="Logo Docinho da Tia Lúcia" class="logo-img">
+   Tamanho sugerido: 80x80px (fundo transparente, formato .png) */
+.logo-placeholder {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rosa-doce);
+  border: 3px solid var(--caramelo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.nome-marca {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  color: var(--marrom-brigadeiro);
+  line-height: 1;
+}
+
+.nome-marca span {
+  display: block;
+  font-family: var(--fonte-corpo);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--caramelo-escuro);
+  font-weight: 600;
+}
+
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-principal a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-principal a:hover,
+.nav-principal a.ativo {
+  border-color: var(--caramelo);
+  color: var(--rosa-doce-escuro);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--marrom-brigadeiro);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Botões
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 30px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primario {
+  background: var(--rosa-doce);
+  color: #fff;
+  box-shadow: var(--sombra);
+}
+
+.btn-primario:hover {
+  background: var(--rosa-doce-escuro);
+}
+
+.btn-secundario {
+  background: transparent;
+  border-color: var(--marrom-brigadeiro);
+  color: var(--marrom-brigadeiro);
+}
+
+.btn-secundario:hover {
+  background: var(--marrom-brigadeiro);
+  color: var(--creme-baunilha);
+}
+
+.grupo-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+/* ==========================================================================
+   Banner Principal (Hero)
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--rosa-doce) 0%, var(--rosa-doce-escuro) 100%);
+  color: #fff;
+  padding: 90px 0 120px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 40px, transparent 41px),
+                     radial-gradient(circle at 85% 20%, rgba(255,255,255,0.14) 0, rgba(255,255,255,0.14) 30px, transparent 31px),
+                     radial-gradient(circle at 75% 75%, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 55px, transparent 56px);
+  pointer-events: none;
+}
+
+.hero-conteudo {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero .selo {
+  display: inline-block;
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.2);
+  padding: 8px 18px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.hero p.subtitulo {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.hero .grupo-botoes {
+  justify-content: center;
+}
+
+.hero .btn-primario {
+  background: var(--marrom-brigadeiro);
+}
+
+.hero .btn-primario:hover {
+  background: #33201a;
+}
+
+.hero .btn-secundario {
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero .btn-secundario:hover {
+  background: #fff;
+  color: var(--rosa-doce-escuro);
+}
+
+/* Borda "de forminha de docinho" (scalloped) — assinatura visual do site.
+   Simula o recorte ondulado das forminhas de papel usadas nos docinhos. */
+.borda-forminha {
+  position: relative;
+  height: 34px;
+  width: 100%;
+  background: var(--creme-baunilha);
+  margin-top: -1px;
+}
+
+.borda-forminha::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background-image: radial-gradient(circle at 18px 0, transparent 17px, var(--rosa-doce-escuro) 18px);
+  background-size: 36px 36px;
+  background-repeat: repeat-x;
+}
+
+/* ==========================================================================
+   Seções gerais
+   ========================================================================== */
+
+section {
+  padding: 80px 0;
+}
+
+.rotulo-secao {
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--caramelo-escuro);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--marrom-brigadeiro);
+  margin: 0 0 26px;
+}
+
+/* ==========================================================================
+   Sobre nós
+   ========================================================================== */
+
+.sobre {
+  background: var(--creme-baunilha);
+}
+
+.sobre .container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.sobre-foto {
+  position: relative;
+}
+
+/* Moldura circular "de forminha" para a foto da Tia Lúcia */
+.moldura-forminha {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--rosa-doce);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 0 0 8px var(--creme-baunilha), 0 0 0 11px var(--rosa-doce), var(--sombra);
+  font-size: 0.95rem;
+}
+
+.sobre-texto p {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  color: var(--marrom-suave);
+}
+
+.sobre-texto p:first-of-type::first-letter {
+  font-family: var(--fonte-titulo);
+  font-size: 3.2rem;
+  color: var(--rosa-doce-escuro);
+  float: left;
+  line-height: 0.8;
+  margin: 8px 8px 0 0;
+}
+
+.assinatura {
+  font-family: var(--fonte-titulo);
+  font-size: 1.7rem;
+  color: var(--rosa-doce-escuro);
+  margin-top: 20px;
+}
+
+/* ==========================================================================
+   Destaques / Cards de produto
+   ========================================================================== */
+
+.destaques {
+  background: var(--creme-cartao);
+}
+
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.card-doce {
+  background: #fff;
+  border-radius: var(--raio);
+  padding: 22px 20px 26px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-doce:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px -14px rgba(74, 46, 35, 0.4);
+}
+
+/* Moldura scalloped em volta das fotos dos produtos, como uma forminha vista de cima */
+.foto-doce {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--rosa-doce);
+  background: repeating-conic-gradient(var(--rosa-doce) 0deg 18deg, var(--rosa-doce-escuro) 18deg 20deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+/* Quando já existe uma foto real, ela substitui o "::after" de texto */
+.foto-doce.tem-foto::after {
+  content: "";
+}
+
+.foto-doce img {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-doce h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+  color: var(--marrom-brigadeiro);
+}
+
+.card-doce p {
+  font-size: 0.92rem;
+  color: var(--marrom-suave);
+  margin: 0;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--caramelo-escuro);
+  background: rgba(217, 154, 78, 0.15);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* ==========================================================================
+   Chamada para ação (faixa)
+   ========================================================================== */
+
+.faixa-cta {
+  background: var(--marrom-brigadeiro);
+  color: var(--creme-baunilha);
+  text-align: center;
+}
+
+.faixa-cta .titulo-secao {
+  color: var(--creme-baunilha);
+}
+
+.faixa-cta p {
+  max-width: 560px;
+  margin: 0 auto 10px;
+  color: #e7d6cb;
+  font-size: 1.05rem;
+}
+
+.faixa-cta .grupo-botoes {
+  justify-content: center;
+}
+
+.faixa-cta .btn-secundario {
+  border-color: var(--creme-baunilha);
+  color: var(--creme-baunilha);
+}
+
+.faixa-cta .btn-secundario:hover {
+  background: var(--creme-baunilha);
+  color: var(--marrom-brigadeiro);
+}
+
+/* ==========================================================================
+   Rodapé
+   ========================================================================== */
+
+.rodape {
+  background: var(--rosa-doce-escuro);
+  color: #fff;
+  padding: 60px 0 30px;
+}
+
+.rodape .container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 40px;
+}
+
+.rodape h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  margin: 0 0 14px;
+}
+
+.rodape p,
+.rodape li {
+  font-size: 0.92rem;
+  color: #ffe9ee;
+}
+
+.rodape ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape li {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.rodape-baixo {
+  border-top: 1px solid rgba(255,255,255,0.25);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ffe9ee;
+}
+
+/* ==========================================================================
+   Página de Catálogo — produtos.html
+   ========================================================================== */
+
+.topo-catalogo {
+  background: linear-gradient(160deg, var(--rosa-doce) 0%, var(--rosa-doce-escuro) 100%);
+  color: #fff;
+  padding: 60px 0 90px;
+  text-align: center;
+}
+
+.topo-catalogo h1 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin: 0 0 12px;
+}
+
+.topo-catalogo p {
+  max-width: 560px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+.filtro-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: -55px 0 50px;
+  position: relative;
+  z-index: 5;
+}
+
+.filtro-categorias button {
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 2px solid var(--rosa-doce);
+  background: #fff;
+  color: var(--marrom-brigadeiro);
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filtro-categorias button:hover,
+.filtro-categorias button.ativo {
+  background: var(--rosa-doce);
+  color: #fff;
+}
+
+.categoria-produtos {
+  padding: 20px 0 60px;
+}
+
+.categoria-produtos h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.1rem;
+  color: var(--marrom-brigadeiro);
+  border-bottom: 2px dashed var(--rosa-doce);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.grade-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card-produto {
+  background: #fff;
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+}
+
+/* Espaço reservado para foto do produto. Substitua o div por:
+   <img src="imagens/nome-do-produto.jpg" alt="Descrição do produto"> */
+.foto-produto-placeholder {
+  height: 170px;
+  background: repeating-linear-gradient(135deg, var(--creme-cartao), var(--creme-cartao) 12px, #fbe0d0 12px, #fbe0d0 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--caramelo-escuro);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+}
+
+.foto-produto {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.corpo-card-produto {
+  padding: 20px 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.corpo-card-produto h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.55rem;
+  margin: 0 0 8px;
+  color: var(--marrom-brigadeiro);
+}
+
+.corpo-card-produto p.descricao {
+  font-size: 0.92rem;
+  color: var(--marrom-suave);
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.info-produto {
+  font-size: 0.82rem;
+  margin: 4px 0;
+  color: var(--marrom-brigadeiro);
+}
+
+.info-produto strong {
+  color: var(--caramelo-escuro);
+}
+
+.como-encomendar {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rosa-doce);
+  font-size: 0.82rem;
+  color: var(--marrom-suave);
+}
+
+/* ==========================================================================
+   Animações leves de entrada (respeitando prefers-reduced-motion)
+   ========================================================================== */
+
+.revelar {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revelar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .revelar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-doce:hover,
+  .card-produto:hover,
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+
+@media (max-width: 860px) {
+  .sobre .container {
+    grid-template-columns: 1fr;
+  }
+  .moldura-forminha {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .rodape .container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-principal {
+    position: fixed;
+    top: 84px;
+    left: 0;
+    right: 0;
+    background: var(--creme-baunilha);
+    border-bottom: 2px dashed var(--rosa-doce);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-principal.aberto {
+    max-height: 320px;
+  }
+  .nav-principal ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 24px 20px;
+  }
+  .nav-principal li {
+    border-bottom: 1px solid rgba(217,126,147,0.2);
+  }
+  .nav-principal a {
+    display: block;
+    padding: 14px 0;
+  }
+  .menu-toggle {
+    display: inline-flex;
+  }
+  .hero {
+    padding: 60px 0 90px;
+  }
+  section {
+    padding: 56px 0;
+  }
+  .filtro-categorias {
+    margin-top: -40px;
+  }
+}
+/* ==========================================================================
+   Ajuste Estético do Banner (.banner-img)
+   ========================================================================== */
+
+   .home-section {
+    width: 100%;
+    padding: 50px 0; /* Dá um respiro em cima e embaixo */
+  }
+  
+  .banner-container {
+    width: 100%;
+    max-width: var(--largura-max); /* Mantém o mesmo limite de 1120px do resto do site */
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;            /* Evita que a imagem fique alta demais na tela */
+    object-fit: cover;            /* Enquadra a imagem sem distorcer */
+    border-radius: var(--raio);   /* Deixa os cantos arredondados (18px) */
+    box-shadow: var(--sombra);    /* Aplica a sombra suave tom de brigadeiro */
+    border: 4px solid #fff;       /* Cria um contorno branco estilo cartão/foto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .banner-img:hover {
+    transform: translateY(-4px);  /* Leve elevação ao passar o mouse */
+    box-shadow: 0 16px 30px -14px rgba(74, 46, 35, 0.4);
+  }
