@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardápio de Sabores | Docinho da Tia Lúcia</title>
+<meta name="description" content="Conheça todos os sabores de docinhos artesanais da Tia Lúcia: brigadeiros, beijinhos, cajuzinhos, docinhos gourmet, kits para festa e muito mais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header class="cabecalho">
+  <div class="container">
+    <div class="marca">
+      <!-- ESPAÇO RESERVADO PARA A LOGO (feita no Canva) — mesma logo do index.html -->
+      <div class="logo-placeholder" aria-hidden="true">TL</div>
+      <p class="nome-marca">Docinho da Tia Lúcia<span>Doces artesanais com carinho</span></p>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰ Menu</button>
+
+    <nav class="nav-principal" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#sobre">Nossa História</a></li>
+        <li><a href="index.html#destaques">Destaques</a></li>
+        <li><a href="produtos.html" class="ativo">Cardápio</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== TOPO DO CATÁLOGO ===================== -->
+<section class="topo-catalogo">
+  <div class="container">
+    <h1>Nosso Cardápio de Sabores</h1>
+    <p>Cada docinho aqui foi provado, aprovado e enrolado com carinho antes de chegar até você. Escolha os seus favoritos e chama no WhatsApp para encomendar!</p>
+  </div>
+</section>
+
+<div class="container">
+  <!-- Filtro de categorias: mostra/esconde as seções abaixo via script.js -->
+  <div class="filtro-categorias" role="tablist" aria-label="Filtrar por categoria">
+    <button data-categoria="todos" class="ativo">Todos</button>
+    <button data-categoria="brigadeiros">Brigadeiros</button>
+    <button data-categoria="beijinhos">Beijinhos</button>
+    <button data-categoria="cajuzinhos">Cajuzinhos</button>
+    <button data-categoria="ninho">Leite Ninho</button>
+    <button data-categoria="chocolate">Chocolate</button>
+    <button data-categoria="coco">Coco</button>
+    <button data-categoria="gourmet">Gourmet</button>
+    <button data-categoria="kits">Kits para Festa</button>
+  </div>
+</div>
+
+<div class="lista-produtos">
+
+  <!-- ===================== BRIGADEIROS ===================== -->
+  <section class="categoria-produtos" data-categoria="brigadeiros">
+    <div class="container">
+      <h2>Brigadeiros</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/34263268/pexels-photo-34263268.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Brigadeiro Tradicional" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Brigadeiro Tradicional</h3>
+            <p class="descricao">O clássico que nunca sai de moda: chocolate cremoso, ponto certinho e aquela casquinha de granulado crocante por fora.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Chocolate ao leite</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Aniversários e festas em geral</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/33643878/pexels-photo-33643878.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Brigadeiro de Churros" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Brigadeiro de Churros</h3>
+            <p class="descricao">Chocolate com um toque de canela e açúcar crocante por cima, como se fosse um churros em forma de docinho.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Chocolate com canela</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Festas temáticas e reuniões de família</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BEIJINHOS ===================== -->
+  <section class="categoria-produtos" data-categoria="beijinhos">
+    <div class="container">
+      <h2>Beijinhos</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/6441165/pexels-photo-6441165.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Beijinho Tradicional" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Beijinho de Coco</h3>
+            <p class="descricao">Macio, branquinho e generoso no coco fresco, com aquele cravinho no topo que já avisa: é doce de festa boa.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Coco</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Chás de bebê e aniversários infantis</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/33643876/pexels-photo-33643876.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Beijinho com Limão" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Beijinho com Toque de Limão</h3>
+            <p class="descricao">A doçura do coco com uma pitadinha de limão que refresca o paladar. Surpreende todo mundo que experimenta.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Coco com limão</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Reuniões de verão e festas ao ar livre</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CAJUZINHOS ===================== -->
+  <section class="categoria-produtos" data-categoria="cajuzinhos">
+    <div class="container">
+      <h2>Cajuzinhos</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/28787816/pexels-photo-28787816.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Cajuzinho Tradicional" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Cajuzinho de Amendoim</h3>
+            <p class="descricao">Amendoim moído na medida certa, docinho no ponto e finalizado com um cravinho, do jeitinho que a vovó fazia.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Amendoim</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Festas juninas e reuniões de família</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEITE NINHO ===================== -->
+  <section class="categoria-produtos" data-categoria="ninho">
+    <div class="container">
+      <h2>Docinhos de Leite Ninho</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/9500620/pexels-photo-9500620.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Ninho com Nutella" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Ninho com Nutella</h3>
+            <p class="descricao">Massa cremosa de leite ninho com um coração de Nutella escondido no meio. A primeira mordida sempre arranca um "nossa!".</p>
+            <p class="info-produto"><strong>Sabor:</strong> Leite ninho com avelã</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Aniversários infantis e festas temáticas</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/28320151/pexels-photo-28320151.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Ninho com Morango" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Ninho com Morango</h3>
+            <p class="descricao">Doce de leite ninho envolvendo um pedacinho de morango fresco. Leve, delicado e lindo na mesa de doces.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Leite ninho com morango</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Chás de bebê e casamentos</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHOCOLATE ===================== -->
+  <section class="categoria-produtos" data-categoria="chocolate">
+    <div class="container">
+      <h2>Docinhos de Chocolate</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/37296138/pexels-photo-37296138.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Trufa de Chocolate Meio Amargo" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Trufa Meio Amargo</h3>
+            <p class="descricao">Casquinha crocante de chocolate meio amargo com recheio macio e intenso. Para quem gosta de um docinho mais sofisticado.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Chocolate meio amargo</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Casamentos e eventos corporativos</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/12689164/pexels-photo-12689164.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Chocolate ao Leite com Avelã" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Chocolate ao Leite com Avelã</h3>
+            <p class="descricao">Chocolate ao leite cremoso com pedacinhos de avelã torrada, que dão aquele toque crocante especial.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Chocolate ao leite com avelã</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Aniversários e reuniões em família</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COCO ===================== -->
+  <section class="categoria-produtos" data-categoria="coco">
+    <div class="container">
+      <h2>Docinhos de Coco</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/28728774/pexels-photo-28728774.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Cocada Cremosa" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Cocada Cremosa em Docinho</h3>
+            <p class="descricao">Coco fresco ralado na hora, cozido devagar até virar aquela massa cremosa que gruda de saudade na memória.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Coco</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Festas juninas e reuniões de família</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 3 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GOURMET ===================== -->
+  <section class="categoria-produtos" data-categoria="gourmet">
+    <div class="container">
+      <h2>Docinhos Gourmet</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/33158039/pexels-photo-33158039.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Brigadeiro Gourmet Belga" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Brigadeiro Gourmet Belga</h3>
+            <p class="descricao">Feito com chocolate belga selecionado, esse é o docinho que vira assunto na festa. Elegante por fora, puro carinho por dentro.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Chocolate belga</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Casamentos e eventos especiais</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 5 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/9285188/pexels-photo-9285188.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Pistache com Chocolate Branco" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Pistache com Chocolate Branco</h3>
+            <p class="descricao">Cremosidade do chocolate branco com o sabor marcante do pistache. Um docinho para impressionar os convidados mais exigentes.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Pistache e chocolate branco</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Eventos corporativos e casamentos</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 5 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KITS PARA FESTAS ===================== -->
+  <section class="categoria-produtos" data-categoria="kits">
+    <div class="container">
+      <h2>Kits para Festas</h2>
+      <div class="grade-catalogo">
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/11281623/pexels-photo-11281623.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kit Festa 50 unidades" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Kit Festa — 50 unidades</h3>
+            <p class="descricao">Uma seleção com 5 sabores escolhidos por você, montada com carinho para deixar a mesa de doces linda e completa.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Sabores à sua escolha</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Aniversários e confraternizações</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 5 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/28613103/pexels-photo-28613103.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kit Chá de Bebê" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Kit Chá de Bebê</h3>
+            <p class="descricao">Docinhos delicados em tons suaves, pensados especialmente para deixar o chá de bebê ainda mais fofo e especial.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Combinação de sabores claros (coco, ninho e beijinho)</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Chás de bebê e revelação</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 5 dias de antecedência.</p>
+          </div>
+        </article>
+
+        <article class="card-produto">
+          <img class="foto-produto" src="https://images.pexels.com/photos/36571072/pexels-photo-36571072.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kit Corporativo" loading="lazy">
+          <div class="corpo-card-produto">
+            <h3>Kit Corporativo</h3>
+            <p class="descricao">Docinhos gourmet embalados individualmente, perfeitos para eventos de empresa e confraternizações no trabalho.</p>
+            <p class="info-produto"><strong>Sabor:</strong> Combinação gourmet</p>
+            <p class="info-produto"><strong>Ocasião:</strong> Eventos corporativos</p>
+            <p class="como-encomendar">📱 Encomende pelo WhatsApp (11) 91234-5678, com no mínimo 7 dias de antecedência.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== FAIXA DE CHAMADA PARA AÇÃO ===================== -->
+<section class="faixa-cta">
+  <div class="container">
+    <h2 class="titulo-secao">Ficou com vontade de um docinho?</h2>
+    <p>Me chama no WhatsApp e vamos montar juntos a combinação perfeita para a sua festa. Vai ficar tudo do seu jeitinho!</p>
+    <div class="grupo-botoes">
+      <a href="index.html#contato" class="btn btn-primario" style="background:var(--rosa-doce);">Fazer Encomenda</a>
+      <a href="index.html" class="btn btn-secundario">Voltar ao Início</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape" id="contato">
+  <div class="container">
+    <div>
+      <h3>Docinho da Tia Lúcia</h3>
+      <p>Doces artesanais feitos um a um, com ingredientes selecionados e muito carinho, para deixar a sua festa ainda mais gostosa.</p>
+    </div>
+
+    <div>
+      <h3>Fale Comigo</h3>
+      <ul>
+        <li>📱 WhatsApp: (11) 91234-5678</li>
+        <li>📧 contato@docinhodatialucia.com.br</li>
+        <li>📷 Instagram: @docinhodatialucia</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Encomendas</h3>
+      <ul>
+        <li>🕒 Atendimento: Terça a Domingo, 9h às 19h</li>
+        <li>📦 Encomendas com no mínimo 3 dias de antecedência</li>
+        <li>🍬 Dúvidas sobre sabores? Chama no WhatsApp!</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rodape-baixo">
+    <p>&copy; 2026 Docinho da Tia Lúcia — Feito com carinho, um docinho de cada vez.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
